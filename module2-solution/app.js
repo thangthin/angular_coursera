@@ -4,7 +4,7 @@
 
     app.controller("ToBuyController", ["$scope", ToBuyController]);
 
-    app.controller("AlreadyBoughtController", ["$scope", AlreadyBoughtContoller]);
+    app.controller("AlreadyBoughtController", ["$scope", AlreadyBoughtController]);
 
     function ToBuyController() {
 
