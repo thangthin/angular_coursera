@@ -1,0 +1,8 @@
+<div>
+    <ul>
+        <li ng-repeat="item in FIDCtrl.foundItems">
+            Name: {{ item.name }}, Short-Name: {{ item.short_name }}, Description: {{ item.description }}
+            <button class="btn" ng-click="FIDCtrl.onRemove({itemIndex: $index})">Don't want this one!</button>
+        </li>
+    </ul>
+</div>
