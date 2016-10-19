@@ -6,11 +6,19 @@
     function MenuDataService($http) {
         var service = this;
         service.getAllCategories = function() {
-            console.log("called getAllCategories from menuDataService");
+            console.log("calling getAllCategories");
+            return $http.get("https://davids-restaurant.herokuapp.com/categories.json")
+                .then(function(response) {
+                    return response.data;
+                });
         };
 
-        service.getItemsForCategories = function(categoryShortName) {
+        service.getItemsForCategory = function(categoryShortName) {
             console.log("called getItemsForCategories from menuDataService");
+            return $http.get("https://davids-restaurant.herokuapp.com/menu_items.json?category=" + categoryShortName)
+                .then(function(response) {
+                    return response.data;
+                });
         };
     }
 
