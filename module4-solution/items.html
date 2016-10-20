@@ -1,7 +1,12 @@
 <div>
     <ul>
         <li ng-repeat="item in $ctrl.data">
-            name {{item.name}}
+            <p><span>name</span>: {{item.name}}</p>
+            <p ng-if="item.price_large"><span>price for large</span>: {{ item.price_large }}</p>
+            <p ng-if="item.price_small"><span>price for small</span>: {{ item.price_small }}</p>
+            <p ng-if="item.large_portion"><span>large portion</span>: {{ item.large_portion }}</p>
+            <p ng-if="item.small_portion"><span>small portion</span>: {{ item.small_portion }}</p>
+            <p ng-if="item.description">{{ item.description }}</p>
         </li>
     </ul>
 </div>
